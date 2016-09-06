@@ -1,6 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, Package) {
+  $scope.packages = Package.all();
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -19,6 +21,10 @@ angular.module('starter.controllers', [])
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
+})
+
+.controller('DashDetailCtrl', function($scope, $stateParams, Package) {
+  $scope.package = Package.get($stateParams.packageId);
 })
 
 .controller('AccountCtrl', function($scope) {

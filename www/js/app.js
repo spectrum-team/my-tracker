@@ -19,7 +19,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       // StatusBar.styleDefault();
-      StatusBar.backgroundColorByHexString('#0a9dc7');
+      StatusBar.backgroundColorByHexString('#00338a');
     }
   });
 })
@@ -66,6 +66,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
           controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+
+    .state('tab.package-detail', {
+      url: '/dash/:packageId',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/dash-detail.html',
+          controller: 'DashDetailCtrl'
         }
       }
     })

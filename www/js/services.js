@@ -47,4 +47,65 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+
+.factory('Package', function () {
+  var packages = [
+    {
+      id: 1,
+      name: "Electrodomesticos",
+      seller: "Japan",
+      status: "Aduanas"
+    },
+    {
+      id: 1,
+      name: "Electrodomesticos",
+      seller: "Japan",
+      status: "Aduanas"
+    },
+    {
+      id: 1,
+      name: "Electrodomesticos",
+      seller: "Japan",
+      status: "Aduanas"
+    },
+    {
+      id: 1,
+      name: "Electrodomesticos",
+      seller: "Japan",
+      status: "Aduanas"
+    },
+    {
+      id: 1,
+      name: "Electrodomesticos",
+      seller: "Japan",
+      status: "Aduanas"
+    },
+    {
+      id: 1,
+      name: "Electrodomesticos",
+      seller: "Japan",
+      status: "Aduanas"
+    },
+    {
+      id: 1,
+      name: "Electrodomesticos",
+      seller: "Japan",
+      status: "Aduanas"
+    }
+  ];
+
+  return {
+    all: function() {
+      return packages;
+    },
+    get: function(packageId) {
+      for (var i = 0; i < packages.length; i++) {
+        if (packages[i].id === parseInt(packageId)) {
+          return packages[i];
+        }
+      }
+      return null;
+    }
+  };
+})
